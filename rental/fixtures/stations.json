@@ -1,0 +1,34 @@
+[
+  {
+    "model": "rental.lockstation",
+    "pk": 1,
+    "fields": {
+      "name": "Central Storage",
+      "address": "123 Main Street, City Center"
+    }
+  },
+  {
+    "model": "rental.lockstation",
+    "pk": 2,
+    "fields": {
+      "name": "Safe Vault",
+      "address": "456 Oak Avenue, Financial District"
+    }
+  },
+  {
+    "model": "rental.lockstation",
+    "pk": 3,
+    "fields": {
+      "name": "LockHub",
+      "address": "789 Pine Street, Industrial Zone"
+    }
+  },
+  {
+    "model": "rental.lockstation",
+    "pk": 4,
+    "fields": {
+      "name": "Secure Storage Solutions",
+      "address": "890 Elm Street, Business Park"
+    }
+  }
+]

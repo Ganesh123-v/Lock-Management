@@ -1,0 +1,98 @@
+{% extends 'account_base.html' %}
+
+{% load static %}
+
+{% block title %} Login {% endblock %} 
+
+{% block content %}
+
+<section
+  style="
+    
+  "
+  class="d-flex flex-grow-1"
+>
+  <div
+    style="backdrop-filter: blur(12px)"
+    class="d-flex justify-content-center align-items-center flex-grow-1"
+  >
+    <div>
+      <div class="card card-body p-5">
+        <div class="text-center mb-5">
+          <a href="{% url 'locks' %}" style="text-decoration: none;color: #99BC85;" class="mb-2">
+            <h1 style="font-weight: bolder;" class="">LockEase</h1>
+          </a>
+        </div>
+
+        <form action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+          <p>Login to your account</p>
+
+          <div data-mdb-input-init class="form-outline mt-4">
+            <input
+              value="{{ form_data.email }}"
+              name="email"
+              type="email"
+              id="form2Example11"
+              class="form-control"
+              placeholder="Email Address"
+            />
+            <label class="form-label" for="form2Example11">Email Address</label>
+          </div>
+          {% if errors and errors.email %}
+          <div class="text-sm text-danger">
+            {% for error in errors.email %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div data-mdb-input-init class="form-outline mt-4">
+            <input
+              value="{{ form_data.password }}"
+              name="password"
+              type="password"
+              id="form2Example22"
+              class="form-control"
+            />
+            <label class="form-label" for="form2Example22">Password</label>
+          </div>
+          {% if errors and errors.password %}
+          <div class="text-sm text-danger">
+            {% for error in errors.password %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+          </div>
+          {% endif %} {% if errors and errors.non_field_errors %}
+          <div class="text-sm text-danger">
+            {% for error in errors.non_field_errors %}
+            <div class="error-message">{{ error }}</div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="text-center pt-1 mb-5 pb-1">
+            <div class="text-center pt-1 pb-1">
+              <input
+                value="Login"
+                type="submit"
+                class="btn btn-block fa-lg gradient-custom-2 mb-3"
+              />
+            </div>
+            <a class="text-muted" href="{% url 'forgot_password' %}"
+              >Forgot password?</a
+            >
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center pb-4">
+            <p class="mb-0 me-2">Don't have an account?</p>
+            <a class="btn btn-outline-secondary" href="{% url 'register' %}"
+              >Create New</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Lock Stations
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2 class="mt-2 mb-2" style="font-weight: bolder">Lock Stations</h2>
+  <div class="row">
+    {% if page_obj %}
+    <div class="accordion accordion-flush gap-4 shadow my-4 py-2" id="stationsAccordion">
+      {% for station in page_obj %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse{{ forloop.counter }}"
+            aria-expanded="true"
+            aria-controls="collapse{{ forloop.counter }}"
+          >
+            <div class="row w-100 align-items-center">
+              <h4 class="col-6">{{ station }}</h4>
+              <span class="col-6">{{ station.address }}</span>
+            </div>
+          </button>
+        </h2>
+        <div
+          id="collapse{{ forloop.counter }}"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading{{ forloop.counter }}"
+          
+        >
+          <div class="accordion-body">
+            <div class="row">
+              {% for lock in station.lock_set.all %}
+              <div class="col-lg-6 p-1">
+                <div class="card card-body border-0 rounded-0">
+                  <h5 class="card-title text-secondary">{{ lock }}</h5>
+                  <div class="">
+                    <p class="card-text mb-0">Size</p>
+                    <div class="row">
+                      <div class="col-6">
+                        <span>Height</span
+                        ><span>{{ lock.inner_height }} inches</span>
+                      </div>
+                      <div class="col-6">
+                        <span>Width</span><span>{{ lock.inner_width }} inches</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-2 mb-3">
+                    <span class="col-6">Price</span
+                    ><span class="col-6">${{ lock.price }}</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="">{{ lock.status }}</div>
+                    <a href="{% url 'create_rental' lock_id=lock.id %}" class="btn"
+                      >Rent</a
+                    >
+                  </div>
+                  <p class="card-text mt-2 text-secondary">{{ lock.location }}</p>
+                </div>
+              </div>
+              {% empty %}
+              <h3 class="h-100 d-flex align-items-center">
+                Sorry! | No locks are available for renting at this station
+              </h3>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div>
+      <div
+        style="height: 20vh; font-weight: bolder; border-left-width: 10px"
+        class="card-body px-5 my-4 rounded-0"
+      >
+        <h3 class="h-100 d-flex align-items-center">
+          Sorry! | No locks are available for renting at this time
+        </h3>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endblock %}
+</div>

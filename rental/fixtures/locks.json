@@ -1,0 +1,182 @@
+[
+{
+    "model": "rental.lock",
+    "pk": 1,
+    "fields": {
+      "lock_type": 2,
+      "inner_height": 10,
+      "inner_width": 5,
+      "status": "RENTED",
+      "price": 10.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 2,
+    "fields": {
+      "lock_type": 3,
+      "inner_height": 12,
+      "inner_width": 6,
+      "status": "AVAILABLE",
+      "price": 12.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 3,
+    "fields": {
+      "lock_type": 1,
+      "inner_height": 8,
+      "inner_width": 4,
+      "status": "RESERVED",
+      "price": 8.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 4,
+    "fields": {
+      "lock_type": 2,
+      "inner_height": 15,
+      "inner_width": 8,
+      "status": "AVAILABLE",
+      "price": 15.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 5,
+    "fields": {
+      "lock_type": 3,
+      "inner_height": 10,
+      "inner_width": 10,
+      "status": "AVAILABLE",
+      "price": 20.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 6,
+    "fields": {
+      "lock_type": 1,
+      "inner_height": 20,
+      "inner_width": 10,
+      "status": "RESERVED",
+      "price": 18.0,
+      "station": 1
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 7,
+    "fields": {
+      "lock_type": 3,
+      "inner_height": 15,
+      "inner_width": 10,
+      "status": "AVAILABLE",
+      "price": 10.0,
+      "station": 2
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 8,
+    "fields": {
+      "lock_type": 2,
+      "inner_height": 20,
+      "inner_width": 15,
+      "status": "RENTED",
+      "price": 12.0,
+      "station": 2
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 9,
+    "fields": {
+      "lock_type": 1,
+      "inner_height": 18,
+      "inner_width": 12,
+      "status": "AVAILABLE",
+      "price": 8.0,
+      "station": 2
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 10,
+    "fields": {
+      "lock_type": 2,
+      "inner_height": 30,
+      "inner_width": 15,
+      "status": "AVAILABLE",
+      "price": 25.0,
+      "station": 3
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 11,
+    "fields": {
+      "lock_type": 3,
+      "inner_height": 25,
+      "inner_width": 10,
+      "status": "RENTED",
+      "price": 20.0,
+      "station": 3
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 12,
+    "fields": {
+      "lock_type": 1,
+      "inner_height": 20,
+      "inner_width": 8,
+      "status": "AVAILABLE",
+      "price": 18.0,
+      "station": 3
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 13,
+    "fields": {
+      "lock_type": 2,
+      "inner_height": 15,
+      "inner_width": 15,
+      "status": "RESERVED",
+      "price": 30.0,
+      "station": 4
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 14,
+    "fields": {
+      "lock_type": 3,
+      "inner_height": 20,
+      "inner_width": 20,
+      "status": "AVAILABLE",
+      "price": 40.0,
+      "station": 4
+    }
+},
+{
+    "model": "rental.lock",
+    "pk": 15,
+    "fields": {
+      "lock_type": 1,
+      "inner_height": 18,
+      "inner_width": 12,
+      "status": "AVAILABLE",
+      "price": 35.0,
+      "station": 4
+    }
+}
+]

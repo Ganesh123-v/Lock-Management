@@ -1,0 +1,112 @@
+Retrieving logs...
+============= i-0c437438fa4e05958 ==============
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+  Downloading Django-5.0.4-py3-none-any.whl (8.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 68.0 MB/s eta 0:00:00
+Collecting django-environ==0.11.2
+  Downloading django_environ-0.11.2-py2.py3-none-any.whl (19 kB)
+Collecting django-s3-storage==0.15.0
+  Downloading django_s3_storage-0.15.0-py3-none-any.whl (9.9 kB)
+Collecting djangorestframework==3.15.1
+  Downloading djangorestframework-3.15.1-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 70.6 MB/s eta 0:00:00
+Collecting djangorestframework-simplejwt==5.3.1
+  Downloading djangorestframework_simplejwt-5.3.1-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.3/101.3 kB 30.5 MB/s eta 0:00:00
+Collecting idna==3.7
+  Downloading idna-3.7-py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 22.9 MB/s eta 0:00:00
+Collecting jmespath==1.0.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting pathspec==0.10.1
+  Downloading pathspec-0.10.1-py3-none-any.whl (27 kB)
+Collecting psycopg2-binary==2.9.9
+  Downloading psycopg2_binary-2.9.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 108.7 MB/s eta 0:00:00
+Collecting PyJWT==2.8.0
+  Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+Collecting python-dateutil==2.9.0.post0
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 50.0 MB/s eta 0:00:00
+Collecting PyYAML==6.0.1
+  Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.7/757.7 kB 81.6 MB/s eta 0:00:00
+Collecting requests==2.31.0
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 19.0 MB/s eta 0:00:00
+Collecting s3transfer==0.10.1
+  Downloading s3transfer-0.10.1-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.2/82.2 kB 19.4 MB/s eta 0:00:00
+Collecting semantic-version==2.8.5
+  Downloading semantic_version-2.8.5-py2.py3-none-any.whl (15 kB)
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting sqlparse==0.5.0
+  Downloading sqlparse-0.5.0-py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 11.3 MB/s eta 0:00:00
+Collecting termcolor==1.1.0
+  Downloading termcolor-1.1.0.tar.gz (3.9 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting urllib3==1.26.18
+  Downloading urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.8/143.8 kB 36.3 MB/s eta 0:00:00
+Collecting wcwidth==0.1.9
+  Downloading wcwidth-0.1.9-py2.py3-none-any.whl (19 kB)
+Requirement already satisfied: setuptools>=20.0 in /var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages (from awsebcli==3.20.10->-r requirements.txt (line 2)) (65.5.1)
+INFO: pip is looking at multiple versions of blessed to determine which version is compatible with other requirements. This could take a while.
+INFO: pip is looking at multiple versions of awsebcli to determine which version is compatible with other requirements. This could take a while.
+INFO: pip is looking at multiple versions of <Python from Requires-Python> to determine which version is compatible with other requirements. This could take a while.
+INFO: pip is looking at multiple versions of asgiref to determine which version is compatible with other requirements. This could take a while.
+
+The conflict is caused by:
+    The user requested botocore==1.31.85
+    awsebcli 3.20.10 depends on botocore<1.32.0 and >1.23.41
+    boto3 1.34.88 depends on botocore<1.35.0 and >=1.34.88
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+
+2024/04/21 19:58:36.152404 [INFO] ERROR: Cannot install -r requirements.txt (line 2), -r requirements.txt (line 4) and botocore==1.31.85 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+[notice] A new release of pip available: 22.3.1 -> 24.0
+[notice] To update, run: python3.11 -m pip install --upgrade pip
+
+2024/04/21 19:58:36.152425 [ERROR] An error occurred during execution of command [app-deploy] - [InstallDependency]. Stop running the command. Error: fail to install dependencies with requirements.txt file with error Command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt failed with error exit status 1. Stderr:ERROR: Cannot install -r requirements.txt (line 2), -r requirements.txt (line 4) and botocore==1.31.85 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+[notice] A new release of pip available: 22.3.1 -> 24.0
+[notice] To update, run: python3.11 -m pip install --upgrade pip
+ 
+
+2024/04/21 19:58:36.152429 [INFO] Executing cleanup logic
+2024/04/21 19:58:36.152545 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed to install application dependencies. The deployment failed.","timestamp":1713729516152,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1713729516152,"severity":"ERROR"}]}]}
+
+2024/04/21 19:58:36.152716 [INFO] Platform Engine finished execution on command: app-deploy
+
+2024/04/21 19:59:58.032080 [INFO] Starting...
+2024/04/21 19:59:58.032126 [INFO] Starting EBPlatform-PlatformEngine
+2024/04/21 19:59:58.032146 [INFO] reading event message file
+2024/04/21 19:59:58.032288 [INFO] Engine received EB command cfn-hup-exec
+
+2024/04/21 19:59:58.120552 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:590183748699:stack/awseb-e-ippmjz4vfy-stack/1b78aad0-0019-11ef-87e5-0ea78ca3d538 -r AWSEBAutoScalingGroup --region eu-north-1
+2024/04/21 19:59:58.520104 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:590183748699:stack/awseb-e-ippmjz4vfy-stack/1b78aad0-0019-11ef-87e5-0ea78ca3d538 -r AWSEBBeanstalkMetadata --region eu-north-1
+2024/04/21 19:59:58.929982 [INFO] checking whether command tail-log is applicable to this instance...
+2024/04/21 19:59:58.930000 [INFO] this command is applicable to the instance, thus instance should execute command
+2024/04/21 19:59:58.930046 [INFO] Engine command: (tail-log)
+
+2024/04/21 19:59:58.930169 [INFO] Executing instruction: GetTailLogs
+2024/04/21 19:59:58.930174 [INFO] Tail Logs...
+2024/04/21 19:59:58.930586 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+

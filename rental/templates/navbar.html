@@ -1,0 +1,136 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-2" id="mainNav">
+  <div class="d-flex flex-grow-1 container">
+    <div class="text-center ">
+      <a href="{% url 'locks' %}" style="text-decoration: none;color: #99BC85;" class="mb-2">
+        <h1 style="font-weight: bolder;" class="">LockEase</h1>
+      </a>
+    </div>
+    <div class="flex-grow-1"></div>
+    <div class="d-lg-none">
+      <a
+        class="btn gradient-custom-2 "
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Offcanvas Sidebar-->
+    <div
+      class="offcanvas offcanvas-start d-lg-none"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div
+          class="border mb-4 rounded-2 d-flex flex-column justify-content-center px-4"
+          style="
+            height: 150px;
+            font-size: 1.5em;
+            font-weight: bolder;
+          "
+        >
+          {% if user.is_authenticated %} 
+          <div>
+            {{ user.first_name }}
+          </div>
+          <div style="text-overflow: ellipsis; ">
+            {{ user.email }}
+          </div>
+          {% else %}
+          <div class="">Eventify</div>
+          {% endif %}
+        </div>
+        <div class="d-flex flex-column gap-2 flex-grow-1">
+          <a class="nav-link nav-item px-4 py-2 border rounded-2" href="{% url 'stations' %}"
+            >Lock Stations</a
+          >
+
+          {% if user.is_authenticated %}
+
+          <a
+            class="nav-link nav-item px-4 py-2 border rounded-2"
+            href="{% url 'rentals' %}"
+            >Rentals</a
+          >
+
+          {% endif %}
+
+          <a
+            class="nav-link nav-item px-4 py-2 border rounded-2"
+            href="{% url 'locks' %}"
+            >Available Locks</a>
+
+          <div class="flex-grow-1 "></div>
+
+          {% if user.is_authenticated %}
+          <a
+            href="{% url 'logout' %}"
+            class="btn btn-block a-lg gradient-custom-2"
+            >Logout</a
+          >
+          {% else %}
+          <a
+            href="{% url 'register' %}"
+            class="btn btn-block border gradient-custom-2"
+            >Signup</a
+          >
+          <a href="{% url 'login' %}" class="btn btn-block gradient-custom-2"
+            >Login</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Large Screen Navigation -->
+    <div
+      class="d-none d-lg-flex flex-grow-1 justify-content-between"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav d-flex flex-row gap-2 gap-xl-5 align-items-center">
+        <a class="nav-link nav-item px-4 border rounded-pill" href="{% url 'stations' %}">Lock Stations</a>
+        
+        {% if user.is_authenticated %}
+        <a class="nav-link nav-item px-4 border rounded-pill" href="{% url 'rentals' %}"
+          >Rentals</a
+        >
+        {% endif %}
+
+        <a class="nav-link nav-item px-4 border rounded-pill" href="{% url 'locks' %}"
+          >Available Locks</a
+        >
+      </ul>
+      <div class="d-flex align-items-center gap-4">
+        {% if user.is_authenticated %}
+        <a
+          href="{% url 'logout' %}"
+          class="btn a-lg gradient-custom-2  mx-4"
+          >Logout</a
+        >
+        {% else %}
+        <a href="{% url 'register' %}" class="btn gradient-custom-2 "
+          >Signup</a
+        >
+        <a href="{% url 'login' %}" class="btn gradient-custom-2 "
+          >Login</a
+        >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

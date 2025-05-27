@@ -1,0 +1,168 @@
+{% extends 'account_base.html' %}
+
+{% load static %}
+
+{% block title %} Sign Up {% endblock %} 
+
+{% block content %}
+<section class="gradient-form d-flex flex-grow-1 align-items-center justify-content-center">
+  <div class="">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="">
+        {% if success %}
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Thank you for signing up!</h4>
+          <p>
+            Your account has been created successfully. Please login.
+          </p>
+          <hr>
+        </div>
+        {% endif %}
+        <div class="card rounded-3 text-black">
+          <div class="row">
+            <div class="">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center mb-5">
+                  <a href="{% url 'locks' %}" style="text-decoration: none;color: #99BC85;" class="mb-2">
+                    <h1 style="font-weight: bolder;" class="">LockEase</h1>
+                  </a>
+                </div>
+
+                <form style="min-width: 20rem;" action="{% url 'register' %}" method="post">
+                  {% csrf_token %}
+                  <p>Please signup</p>
+
+                  <div data-mdb-input-init class="form-outline mt-3">
+                    <input
+                      value="{{ form_data.first_name }}"
+                      name="first_name"
+                      type="text"
+                      id="first_name_id"
+                      class="form-control"
+                      placeholder="First Name"
+                    />
+                    <label class="form-label" for="first_name_id"
+                      >First Name</label
+                    >
+                  </div>
+                  {% if errors and errors.first_name %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.first_name %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div data-mdb-input-init class="form-outline mt-3">
+                    <input
+                      value="{{ form_data.last_name }}"
+                      name="last_name"
+                      type="text"
+                      id="last_name_id"
+                      class="form-control"
+                      placeholder="Last Name"
+                    />
+                    <label class="form-label" for="last_name_id"
+                      >Last Name</label
+                    >
+                  </div>
+                  {% if errors and errors.last_name %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.last_name %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div data-mdb-input-init class="form-outline mt-3">
+                    <input
+                      value="{{ form_data.email }}"
+                      name="email"
+                      type="email"
+                      id="email_id"
+                      class="form-control"
+                      placeholder="Email Address"
+                    />
+                    <label class="form-label" for="email_id">Email</label>
+                  </div>
+                  {% if errors and errors.email %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.email %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div data-mdb-input-init class="form-outline mt-3">
+                    <input
+                      value="{{ form_data.password }}"
+                      name="password"
+                      type="password"
+                      id="form2Example22"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form2Example22"
+                      >Password</label
+                    >
+                  </div>
+                  {% if errors and errors.password %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.password %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div data-mdb-input-init class="form-outline mt-3">
+                    <input
+                      value="{{ form_data.confirm_password }}"
+                      name="confirm_password"
+                      type="password"
+                      id="confirm_password_id"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="confirm_password_id"
+                      >Confirm Password</label
+                    >
+                  </div>
+                  {% if errors and errors.confirm_password %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.confirm_password %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  {% if errors and errors.non_field_errors %}
+                  <div class="text-sm text-danger">
+                    {% for error in errors.non_field_errors %}
+                    <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div class="text-center pt-1 mb-5 mt-3 pb-1">
+                    <input
+                      type="submit"
+                      class="btn btn-block fa-lg gradient-custom-2 mb-3"
+                    />
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-center pb-4"
+                  >
+                    <p class="mb-0 me-2">Already have an account?</p>
+                    <a class="btn btn-outline-secondary" href="{% url 'login' %}"
+                      >Login</a
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

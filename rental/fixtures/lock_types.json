@@ -1,0 +1,26 @@
+[
+{
+  "model": "rental.locktype",
+  "pk": 1,
+  "fields": {
+    "name": "Electronic Lock",
+    "description": "An electronic lock uses electrical current to control the bolt. It often requires a keypad, keycard, or biometric authentication for access."
+  }
+},
+{
+  "model": "rental.locktype",
+  "pk": 2,
+  "fields": {
+    "name": "Combination Lock",
+    "description": "A combination lock requires a specific sequence of numbers or symbols to unlock. It is typically used in padlocks or safes."
+  }
+},
+{
+  "model": "rental.locktype",
+  "pk": 3,
+  "fields": {
+    "name": "Keyed Lock",
+    "description": "A keyed lock requires a physical key to unlock. It is one of the most common types of locks."
+  }
+}
+]
